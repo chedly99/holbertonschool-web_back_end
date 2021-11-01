@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" asynchronous coroutine py """
+""" asynchronous coroutine """
 
 from typing import List
 import random
@@ -21,5 +21,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     delay = []
     for _ in range(n):
         tasks.append(wait_random(max_delay))
+    for future in asyncio.as_completed(tasks):
+        returnx = await future
+        delay.append(returnx)
 
     return delay
