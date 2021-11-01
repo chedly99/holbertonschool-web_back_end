@@ -15,7 +15,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         n (int)
         max_delay (int)
     Returns:
-        List[float]: 
+        List[float]
     """
     tasks = []
     delay = []
