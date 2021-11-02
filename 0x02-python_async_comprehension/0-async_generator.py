@@ -9,7 +9,7 @@ import asyncio
 
 async def async_generator() -> Generator[float, None, None]:
     """[summary]
-    async function generator 
+    async function generator
     Yields:
         Generator(floats)
     """
